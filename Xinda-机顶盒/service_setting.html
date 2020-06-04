@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/service_setting.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/element-ui_2.12.0.css">
+  <link rel="stylesheet" type="text/css" href="css/5.css">
+
+<link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_info">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <ul class="user_info">
+               <li><a href=""><i class="fa fa-fw"></i>广告推广</a></li>
+            <li><i class="fa  fa-fw"></i>联系我们</li>
+            <li><i class="fa fa-fw"></i>通知</li>
+            <li>
+                <img src="./images/default_user.png">
+                <span>用户名字</span>
+                <i class="fa fa-chevron-down fa-fw user-arrow-down"></i>
+                <ul class="dropdown">
+                    <li>更改信息</li>
+                    <li>退出登录</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="main-nav">
+               <li>
+                <a href="service_product.html">
+                    <div class="personal">
+            <img src="./images/zhuye.png">
+              </div>
+                    <p>主页</p>
+                </a>
+            </li>
+            <li>
+                <a href="service_orderform.html">
+                   <div class="personal">
+            <img src="./images/kefenlei.png">
+              </div>
+                    <p>客户分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="service_expenses.html">
+              <div class="personal">
+            <img src="./images/yingx.png">
+              </div>
+                    <p>营销支撑</p>
+                </a>
+            </li>
+            <li>
+                <a href="service_setting.html">
+               <div class="personal">
+            <img src="./images/per.png">
+               </div>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+        <div class="main-details">
+<div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">个人信息</li>
+    <li>账户管理</li>
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show"><div class="main-content">
+                <div class="avatars">
+                    <img src="" alt="用户头像">
+                </div>
+                <ul class="store-info">
+                	 <li>
+                        <span>姓名</span>
+                        <span>张三</span>
+                    </li>
+                     <li>
+                        <span>姓别</span>
+                        <span>男</span>
+                    </li>
+                    <li>
+                        <span>地区</span>
+                        <span>北京-朝阳区</span>
+                    </li>
+                    <li>
+                        <span>手机号</span>
+                        <span>18912345678</span>
+                    </li>
+                     <li>
+                        <span>出生日期</span>
+                        <span>1999-2-12</span>
+                    </li>
+                    <li>
+                        <span>邮箱</span>
+                        <span>10001@qq.com</span>
+                    </li>
+                    <li>
+                        <button class="change-info">修改</button>
+                    </li>
+                </ul>
+            </div></div>
+    <div class="layui-tab-item">
+ <div class="group">
+    <button type="button" class="btn">增加</button>
+    <button type="button" class="btn ">编辑</button>
+    <button type="button" class="btn">删除</button>
+  </div>
+    	 <table border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox"></th>
+                        <th>ID<i class="fa fa-long-arrow-up fa-fw"></i></th>                  
+                        <th>手机号</th>
+                        <th>密码</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00001</td>
+                        <td>18845695541</td>
+                        <td>1111111</td>
+                        <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00002</td>
+                        <td>12345622222</td>
+                        <td>4444444</td>
+                        <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00003</td>
+                        <td>45566258885</td>
+                        <td>545542</td>
+                       <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+         <div class="anniu">
+    	 <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">换个账号登陆</button>
+    	 </div>
+    	</div>
+  </div>
+</div>
+        </div>
+    </div>
+    <div class="masking">
+        <div class="scroller">
+            <h3>修改个人信息</h3>
+            <ul>
+                <li>
+                    <span>头像</span>
+                    <button>选择图片</button>
+                </li>
+                <li>
+                    <span>姓名</span>
+                    <input placeholder="请输入姓名" />
+                </li>
+                <li>
+                    <span class="ver-top">选择地区</span>
+                    <select name="" id="">
+                        <option value="">省</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">市</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">区</option>
+                    </select>
+                </li>
+                <li>
+                    <span class="ver-top">手机号</span>
+                    <input type="text" placeholder="请输入手机号">
+                </li>
+                <li> <!-- 注意：这一层元素并不是必须的 -->
+                	 <span class="ver-top">出生日期</span>
+                      <div class="layui-input-inline">
+                     <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+                      </div>
+                </li>
+                <li>
+                    <span class="ver-top">邮箱</span>
+                    <input type="text" placeholder="请输入邮箱">
+                </li>
+            </ul>
+            <button class="save">提交</button>
+            <button class="cancel">取消</button>
+        </div>
+        <script src="./js/service_setting.js"></script>
+        
+        <script src="https://www.layuicdn.com/layui/layui.js"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+       
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+});
+</script>       
+
+</body>
+
+</html>

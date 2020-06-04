@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/service_orderform.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/element-ui_2.12.0.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_info">
+            <img src="./images/logo.png" alt="logo">
+            <span class="platform_name">信达</span>
+        </div>
+        <ul class="user_info">
+            <li><a href=""><i class="fa fa-fw"></i>广告推广</a></li>
+            <li><i class="fa  fa-fw"></i>联系我们</li>
+            <li><i class="fa fa-fw"></i>通知</li>
+            <li>
+                <img src="./images/default_user.png">
+                <span>用户名字</span>
+                <i class="fa fa-chevron-down fa-fw user-arrow-down"></i>
+                <ul class="dropdown">
+                    <li>更改信息</li>
+                    <li>退出登录</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+    	<div class="main-left">
+        <ul class="main-nav">
+            <li>
+                <a href="service_product.html">
+                       <div class="personal">
+            <img src="./images/zhuye.png">
+              </div>
+                    <p>主页</p>
+                </a>
+            </li>
+            <li class="bg-blue">
+                <a href="service_orderform.html">
+                      <div class="personal">
+            <img src="./images/kefenlei.png">
+              </div>
+                    <p>客户分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="service_expenses.html">
+                    <div class="personal">
+            <img src="./images/yingx.png">
+              </div>
+                    <p>营销支撑</p>
+                </a>
+            </li>
+            <li>
+                <a href="service_setting.html">
+                   <div class="personal">
+            <img src="./images/per.png">
+               </div>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+        </div>
+        <div class="main-details">
+        	
+        	<ul class="layui-nav layui-bg-green">
+  <li class="layui-nav-item layui-this">
+    <a href="javascript:;">热门节目</a>
+    <dl class="layui-nav-child">
+      <dd><a href="service_cctv.html">中央卫视</a></dd>
+      <dd><a href="">湖南卫视</a></dd>
+      <dd><a href="">浙江卫视</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="service_TVperson.html">节目观看人数对比</a></li>
+  <li class="layui-nav-item"><a href="service_yold.html">节目观看年龄段对比</a></li>
+  <li class="layui-nav-item"><a href="service_time.html">节目观看时长对比</a></li>
+  <li class="layui-nav-item"><a href="service_sjd.html">节目观看时间段对比</a></li>
+
+</ul>
+        	
+            <div class="main-pagination">
+                <span>首页</span>
+                <span>上一页</span>
+                <span class="main-pagination-page">1</span>
+                <span>下一页</span>
+                <span>尾页</span>
+            </div>
+            <div class="main-sercive">根据不同order点击的返回值进行渲染，不需要多个界面来回展示，</div>
+        </div>
+    </div>
+    <script src="./js/service_orderform.js"></script>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+</body>
+
+</html>
