@@ -1,0 +1,88 @@
+.btn-group .btn:first-child {
+    border-left: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.btn-group .btn {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    border-left: 1px solid rgba(255,255,255,.5);
+    border-radius: 0;
+}
+.btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn, .layui-input, .layui-select, .layui-textarea, .layui-upload-button {
+    outline: 0;
+    -webkit-appearance: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    box-sizing: border-box;
+}
+.btn, .layui-disabled, .layui-icon, .layui-unselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.btn, .layui-edge, .layui-inline, img {
+    vertical-align: middle;
+}
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: 0;
+}
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+.group {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    padding: 0 30px;
+}
+
+body {
+    line-height: 24px;
+    font: 14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;
+}
