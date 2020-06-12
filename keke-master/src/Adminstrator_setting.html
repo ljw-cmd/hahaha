@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/service_setting.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/element-ui_2.12.0.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery-form.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_info">
+            <img src="./images/logo.png" alt="logo">
+            <span class="platform_name">信达</span>
+        </div>
+        <ul class="user_info">
+            <li><a href="redirect?page=service_product"><i class="fa fa-cog fa-fw"></i>服务管理</a></li>
+            <li><i class="fa fa-shopping-cart fa-fw"></i>新订单(0)</li>
+            <li><i class="fa fa-bell-o fa-fw"></i>通知(0)</li>
+            <li>
+                <a class="img"></a>
+                <span id="sysuser">用户名字</span>
+                <i class="fa fa-chevron-down fa-fw user-arrow-down"></i>
+                <ul class="dropdown">
+                    <li>更改信息</li>
+                     <li><a class="exit">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="main-nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-home fa-fw"></i>
+                    <p>主页</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_orderform">
+                    <i class="fa fa-shopping-cart fa-fw"></i>
+                    <p>订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_expenses">
+                    <i class="fa fa-cny fa-fw"></i>
+                    <p>费用</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_store">
+                    <i class="fa fa-institution fa-fw"></i>
+                    <p>店铺</p>
+                </a>
+            </li>
+            <li class="bg-red">
+                <a href="redirect?page=service_setting">
+                    <i class="fa fa-cog fa-fw"></i>
+                    <p>设置</p>
+                </a>
+            </li>
+        </ul>
+        <div class="main-details">
+            <div class="main-top">
+                <ul>
+                    <li>
+                        <i class="fa fa-home fa-fw"></i>
+                    </li>
+                    <li>设置</li>
+                </ul>
+            </div>
+            <ul class="main-tab">
+                <li class="border-red order1">服务商信息</li>
+            </ul>
+            <div class="main-content">
+                <div class="avatars">
+                    <li id="ss"></li>
+                    <p>用户头像</p>
+                </div>
+                <ul class="store-info">
+                    <li>
+                        <span>姓名</span>
+                        <span class="service_name"></span>
+                    </li>
+                    <li>
+                        <span>性别</span>
+                        <span class="service_gender"></span>
+                    </li>
+                    <li>
+                        <span>地区</span>
+                        <span class="service_regionId"></span>
+                    </li>
+                    <li>
+                        <span>手机号</span>
+                        <span class="service_cellphone"></span>
+                    </li>
+                    <li>
+                        <span>出生日期</span>
+                        <span class="service_born"></span>
+                    </li>
+                    <li>
+                        <span>邮箱</span>
+                        <span class="service_email"></span>
+                    </li>
+                    <li>
+                        <button class="change-info">修改</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-sercive">银行信息。。</div>
+        </div>
+    </div>
+    <div class="masking">
+        <div class="scroller">
+            <h3>修改产品信息<h3>
+            <ul>
+                <li>
+                    <span>头像</span> 
+                    <form id="form1" action="/Adminstrator/saveAdminstratorImg" method="post" enctype ="multipart/form-data" style="display:inline-table">
+                    <label for="file"  class="btn btn-primary" style="width: 100px;
+    background-color: #409eff;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;">选择图片</label>
+                    <input id="file" name="file" type="file" style="float: left;display:none"/>
+	                <input name="id" class="userid" type="hidden"/>
+	                
+                </li>
+                <li>
+                    <span>姓名</span>
+                    <input type="text" id="ProviderName" name="ProviderName" placeholder="请输入新的姓名" class="service_name1"/>
+                </li>
+                <li>
+                    <span class="ver-top">性别</span>
+                    <input type="text" placeholder="请输入性别" class="service_gender1">
+                </li>
+                <li>
+                    <span class="ver-top">选择地区</span>
+                    <select name="" id="province" onchange="changesheng()" >
+                    	<option  value="">省</option>
+                    </select>
+                    <select name="" id="county" onchange="changeshi()" >
+                        <option class="region1" value="">市</option>
+                    </select>
+                    <select name="" id="district" >
+                        <option class="region2" value="">区</option>
+                    </select>
+                </li>
+                <li>
+                    <span class="ver-top">手机号</span>
+                    <input type="text" placeholder="请输入手机号" class="service_cellphone1">
+                </li>
+                <li>
+                    <span class="ver-top">出生日期</span>
+                    <input type="text" placeholder="请输入出生日期" class="service_born1">
+                </li>
+                <li>
+                    <span class="ver-top">邮箱</span>
+                    <input type="text" placeholder="请输入邮箱" class="service_email1">
+                </li>
+            </ul>
+            <button class="save">提交</button>
+            <button class="cancel">取消</button>
+            </form>
+        </div>
+        <script>
+       
+//******************************修改信息*******************************
+
+        $(".change-info").on("click", function(event){
+            $(".masking").show();
+            $(".service_name1").val(txt1);
+            $(".service_cellphone1").val(txt2);
+            $(".service_born1").val(txt3);
+            $(".service_gender1").val(txt4);
+            $(".service_email1").val(txt5);
+//            var str=txt6.split(" ");
+//            console.log("hude",str[1]);
+//            $("#province").val(str[0]);
+//            $("#county").val(str[1]);
+//            $(".region2").val(str[2]);
+        })
+        //********************************保存信息*******************************
+
+        $(".save").on("click", function(event){
+            $(".masking").hide();
+                   var id=sessionStorage.getItem("id")
+                   var placeholder= $("#search").attr("placeholder");
+                   console.log(id);
+        		    var name=$(".service_name1").val();
+        		    var gender=$(".service_gender1").val();
+         			var cellphone=$(".service_cellphone1").val();
+         			//var region=$("#district").val();
+         			//console.log("区====1"+region);
+         			var born=$(".service_born1").val();
+         			var email=$(".service_email1").val();
+         			//console.log("保存"+name,cellphone,born,gender,email);
+         			/*//省市区***********************
+         			var province = $("#province").val();
+         			var county = $("#county").val();
+         			var district = $("#district").val();*/
+         			console.log("地区"+province,county,district);
+         				
+         			 $.ajax({
+         				//请求类型
+         				type:"post",
+         				//请求路径
+         				url:"Adminstrator/AdminstratorUpdate",
+         				//请求参数
+         				data:{
+         					id:id,
+         					name:name,
+         					gender:gender,
+         					cellphone:cellphone,
+         					//region:region,
+         					born:born,
+         					email:email,
+         				},
+         				//返回数据类型
+         				dataType:"json",
+         				//请求成功后调用函数
+         				success:function(data){
+         					console.log("保存",data);
+         					location.href="redirect?page=Adminstrator_setting"
+         					alert(data.msg);
+         				},
+         				error:function(data){
+         					console.log("失败后返回的数据",data);
+         				}
+         			}) 
+        })
+        //*******************************取消保存*********************************
+
+        $(".cancel").on("click", function(event){
+            $(".masking").hide();
+            console.log("取消");
+        })
+
+//**************************信息展示***********************************
+        var txt1;var txt2;var txt3;var txt4;var txt5;var txt6;
+        
+        $(function(){
+        	var loginId=sessionStorage.getItem("id")
+            console.log(loginId);
+        	    var userName=$(".service_name").val();
+        	   	var regionId=$(".service_regionId").val();
+        		var cellphone=$(".service_cellphone").val();
+        		var born=$(".service_born").val();
+        		var gender=$(".service_gender").val();
+        		var email=$(".service_email").val();
+        	$.ajax({
+        			//请求类型
+        			type:"get",
+        			//请求路径
+        			url:"Adminstrator/getAdminstrator",
+        			//请求参数
+        			data:{
+        				userName:userName,
+        				loginId:loginId,
+        				regionId:regionId,
+        				cellphone:cellphone,
+        				born:born,
+        				gender:gender,
+        				email:email,
+        			},
+        			//返回数据类型
+        			dataType:"json",
+        			//请求成功后调用函数
+        			success:function(data){
+        					console.log("成功后返回的数据",data);
+        					var adminstrator=data.adminstrator;
+        					//每次清空table
+        					$(".service_name").html("");
+        					var txt="";
+        					txt+=adminstrator[0].userName;
+        						    	console.log(txt);
+        		 					$(".service_name").append(txt);
+        		 					txt1=txt;
+        		 			$(".service_regionId").html("");
+        							var txt="";
+        							txt+=adminstrator[0].regionId;
+        								    	console.log("省市区",txt);
+        				 			$(".service_regionId").append(txt);
+        				 			txt6=txt;
+        				 	$(".service_cellphone").html("");
+        							var txt="";
+        							txt+=adminstrator[0].cellphone;
+        								    	console.log(txt);
+        				 			$(".service_cellphone").append(txt);
+        				 			txt2=txt;
+        				 	$(".service_born").html("");
+        							var txt="";
+        							txt+=adminstrator[0].born;
+        								    	console.log(txt);
+        				 			$(".service_born").append(txt);
+        				 			txt3=txt;
+        				 	$(".service_gender").html("");
+        									var txt="";
+        									txt+=adminstrator[0].gender;
+        										    	console.log(txt);
+        						 	$(".service_gender").append(txt);
+        						 	txt4=txt;
+        					$(".service_email").html("");
+        							var txt="";
+        							txt+=adminstrator[0].email;
+        								    	console.log(txt);
+        				 	       $(".service_email").append(txt);
+        				 	      txt5=txt;
+        		 				},
+        			error:function(data){
+        				console.log("失败后返回的数据",data);
+        			}
+        		}) 
+        })
+
+        /*$(function(){
+        	$.ajax({
+        		type: "post",
+        		url: "provider2/province",
+        		dataType: "json",
+        		success: function(data){
+        			var province = data.province;
+        			console.log("成功后返回的数据",province);
+        			$("#province").html("");
+        			txt="";
+        			txt +=`<option value="">省</option>`
+        			for(var i = 0;i<province.length;i++){
+        				txt +=`
+                                <option onclick="provinceid('${province[i].id}')"  value="${province[i].id}">${province[i].name}</option>`
+        			}
+        			$("#province").append(txt);
+        			$("#county").html("");
+        			txt="";
+        			txt +=`<option value="">市</option>`
+        			$("#county").append(txt);
+        			$("#district").html("");
+        			txt="";
+        			txt +=`<option value="">区</option>`
+        			$("#district").append(txt);
+        			
+        		},
+        		error: function(data){
+        			console.log("失败后返回的数据",data);
+        		}
+        	})
+        })
+
+        function changesheng(){
+        	var id = $("#province").val();
+        	console.log("省",id);
+        	$.ajax({
+        		type: "post",
+        		url: "provider2/county",
+        		data:{
+        			id:id,
+        		},
+        		dataType: "json",
+        		success: function(data){
+        			var county = data.county;
+        			$("#county").html("");
+        			txt="";
+        			txt +=`<option value="">市</option>`
+        			for(var i = 0;i<county.length;i++){
+        				txt +=`
+                                <option class="countyid" value="${county[i].id}">${county[i].name}</option>`
+        			}
+        			$("#county").append(txt);
+        			$("#district").html("");
+        			txt="";
+        			txt +=`<option value="">区</option>`
+        			$("#district").append(txt);
+        		},
+        		error: function(data){
+        			console.log("失败后返回的数据",data);
+        		}
+        	})
+        }
+
+
+        function changeshi(){
+        	var id = $("#county").val();
+        	console.log("市id",id);
+        	$.ajax({
+        		type: "post",
+        		url: "provider2/district",
+        		data:{
+        			id:id,
+        		},
+        		dataType: "json",
+        		success: function(data){
+        			var district = data.district;
+        			$("#district").html("");
+        			txt="";
+        			txt +=`<option value="">区</option>`
+        			for(var i = 0;i<district.length;i++){
+        				txt +=`
+                                <option class="districtid" value="${district[i].id}">${district[i].name}</option>`
+        			}
+        			$("#district").append(txt);
+        		},
+        		error: function(data){
+        			console.log("失败后返回的数据",data);
+        		}
+        	})
+        }*/
+
+		//用户页面头像
+        $(function(){
+        	
+        	$("#sysuser").append(txt);
+        	var id=sessionStorage.getItem("id");
+        	var id1=$(".userid").val(id);
+        	console.log(id1);
+        	$("#ss").html("");
+        	var txt="";
+        	txt +=`
+        	<img class="img" name="id" src="Adminstrator/AdminstratorheadImg?id=${id}" onerror="defaultImg(this)"/>`
+        		$("#ss").append(txt);
+        })
+
+       //图像展示
+       
+        	function defaultImg(img){
+        	var id=sessionStorage.getItem("id")
+        		img.src="images/user-lg.png";
+        	}
+
+        $("#form1").ajaxForm(function(data) {
+        	console.log(data);
+        	location.href="redirect?page=Adminstrator_setting"
+        	console.log("str:" + JSON.stringify(data));
+        	}
+        );
+
+       
+      
+        $(function(){
+        	img();
+        	login();
+        })
+//********************顶部用户信息************
+        function img(){
+        	$("#sysuser").html("");
+        	var txt="";
+        	txt +=sessionStorage.getItem("username")
+        	$("#sysuser").append(txt);
+        	var userid=sessionStorage.getItem("id")
+        	$(".img").html("");
+        	var txt="";
+        	txt +=`<img  src="Adminstrator/AdminstratorheadImg?id=${userid}" onerror="defaultImg(this)" style="
+        	    width: 50px;
+        	    height: 50px;
+        	    border-radius: 50px;
+        	    display: inline-block;
+        	    border: 1px solid #e1e1e1;
+        		"/>`
+        	$(".img").append(txt);
+        }
+        function login(){
+        	var userid=sessionStorage.getItem("id");
+        	var username=sessionStorage.getItem("username");
+        	var status=sessionStorage.getItem("status");
+        	console.log(username);
+        	if(status!=1){
+        		alert("请先登录");
+        		 location.href="redirect?page=Adminstrator_login"
+        	}
+        }
+      //退出登录
+        $(".exit").on("click",function(){
+        	sessionStorage.setItem("id","")
+        	sessionStorage.setItem("name","")
+        	sessionStorage.setItem("status",2)
+        	 location.href="redirect?page=index"
+        })
+        </script>
+</body>
+
+</html>

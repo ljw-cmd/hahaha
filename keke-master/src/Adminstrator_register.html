@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/e-commerce_register.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="headder-top">
+        <div class="width1200 headder-top-content">
+            <div>欢迎来到信达！ 请<a href="redirect?page=e-commerce_login" class="font-aqua">登录</a> <a href="redirect?page=e-commerce_register" class="font-aqua">快速注册 </a>
+            </div>
+        </div>
+    </div>
+    <ul class="content width1200">
+        <ul class="xinda-logo">
+            <li>
+                <img src="./images/logo-blue.png" alt="">
+            </li>
+            <li>
+                欢迎注册
+            </li>
+        </ul>
+        <h2 class="title">信达客户端</h2>
+        <ul class="main">
+            <ul class="input">
+            	<li>
+                    <input id="username" type="text" placeholder="请输入用户名"   required="required" maxlength=11>
+                </li>
+                <li>
+                    <input id="cellphone" type="text" placeholder="请输入手机号"   required="required" maxlength=11>
+                </li>
+                <li>
+                    <input type="text" class="code" placeholder="请输入验证码">
+                    <img onclick="imgChange()" class="img" src="imgGetCode" />
+                </li>
+                <li>
+                    <select name="" id="sheng" onchange="changesheng()" >
+                    	<option value="">省</option>
+                    </select>
+                    <select name="" id="shi" onchange="changeshi()" >
+                        <option value="">市</option>
+                    </select>
+                    <select name="" id="qu" >
+                        <option value="">区</option>
+                    </select>
+                </li>
+                <li>
+                    <input id="password" type="password" placeholder="请设置密码">
+                </li>
+                <li>
+                    <p class="login-btn font-aqua">立即注册</p>
+                </li>
+            </ul>
+            <ul class="register">
+                <li>已有账号？</li>
+                <li class="font-aqua"><a class=" font-aqua" href="redirect?page=e-commerce_login">立即登录>></a></li>
+                <li>
+                    <img src="./images/login-man.png" alt="">
+                </li>
+            </ul>
+        </ul>
+    </ul>
+            <script>
+            $(function() {
+            	var img = document.getElementsByClassName("img")[0];
+            	img.src = "imgGetCode";
+            })
+            function imgChange() {
+            	var img = document.getElementsByClassName("img")[0];
+            	var time = new Date().getTime();
+            	img.src = "imgGetCode?t=" + time;
+            }
+            //管理员用户注册
+            $(".login-btn").on("click",function(){
+            	/*var sheng = $("#sheng").val();
+            	var shi = $("#shi").val();
+            	var qu = $("#qu").val();
+            	console.log(sheng,shi,qu);*/
+   
+            	var username = $("#username").val();
+            	var cellphone = $("#cellphone").val();
+            	var password = $("#password").val();
+            	var code = $(".code").val();
+            	console.log(cellphone)
+            	
+            	$.ajax({
+            		type: "post",
+            		url: "/api/Adminstratorregister/Adminstratorindex",
+            		data:{
+            			username:username,
+            			cellphone:cellphone,
+            			password:password,
+            			code:code,
+            		},
+            		dataType: "json",
+            		success: function(data){
+            			console.log("成功后返回的数据",data);
+            			alert(data.msg);
+            			if(data.sta==1){
+            				 location.href="http://localhost:8080/redirect?page=Adminstrator_login"
+            				}
+            		},
+            		error: function(data){
+            			console.log("失败后返回的数据",data);
+            		}
+            	})
+            })
+            
+            </script>
+</body>
+
+</html>

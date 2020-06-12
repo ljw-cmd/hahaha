@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/service_expenses.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/element-ui_2.12.0.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_info">
+            <img src="./images/logo.png" alt="logo">
+            <!--<span class="platform_name">信达</span>-->
+        </div>
+        <ul class="user_info">
+             <li><a href="http://ad.free-ad.cn/"><i class="fa fa-fw"></i>广告推广</a></li>
+            <li><i class="fa  fa-fw"></i>联系我们</li>
+            <li><i class="fa fa-fw"></i>通知</li>
+            <li>
+                <a class="img"></a>
+                <span id="sysuser">用户名字</span>
+                <i class="fa fa-chevron-down fa-fw user-arrow-down"></i>
+                <ul class="dropdown">
+                    <li>更改信息</li>
+                    <li><a class="exit">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="main-nav">
+               <li>
+                <a href="redirect?page=service_product.html">
+                       <div class="personal">
+            <img src="./images/zhuye.png">
+              </div>
+                    <p>主页</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_orderform.html">
+                     <div class="personal">
+            <img src="./images/kefenlei.png">
+              </div>
+                    <p>客户分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_expenses.html">
+                   <div class="personal">
+            <img src="./images/yingx.png">
+              </div>
+                    <p>营销支撑</p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=service_setting.html">
+                 <div class="personal">
+            <img src="./images/per.png">
+               </div>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+        <div class="main-details">
+            <div class="main-top">
+                <ul>
+                    <li>
+                        <i class="fa fa-home fa-fw"></i>
+                    </li>
+                    <!--<li>费用</li>-->
+                </ul>
+            </div>
+            <!--<ul class="main-tab">
+                <li class="border-red order1">费用详情</li>
+                <li class="order2">收益明细</li>
+            </ul>-->
+            <div class="main-content">
+            	
+    <div class="content width1200">
+        <ul class="content-nav select_list5">
+            <!--<li class="nav-active id">综合排序</li>-->
+            <li class="pnum">人数排序 <i class="fa fa-arrows-v fa-lg"></i></li>
+        </ul>
+        <ul class="content-title">
+            <li>节目名称</li>
+            <li>观看人数</li>
+        </ul>
+        <hr color="#ededed" size="1">
+        <div class="table">   
+   
+        </div>
+        <hr color="#ededed" size="1">
+    </div>
+    
+            </div>
+            <!--<div class="returns_detailed">
+                收益明细。。。
+            </div>-->
+        </div>
+    </div>
+    <script src="./js/service_expenses.js"></script>
+</body>
+
+</html>

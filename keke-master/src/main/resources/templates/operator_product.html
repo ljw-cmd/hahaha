@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/operator_product.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/element-ui_2.12.0.css">
+ <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_info">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <ul class="user_info">
+                <li><a href="redirect?page=operator_product.html"><i class="fa fa-cog fa-fw"></i>广告推广</a></li>
+            <li><i class="fa fa-cube fa-fw"></i>联系我们</li>
+            <li>
+                 <a class="img"></a>
+                <span id="sysuser">用户名字</span>
+                <i class="fa fa-chevron-down fa-fw user-arrow-down"></i>
+                <ul class="dropdown">
+                    <li>更改信息</li>
+                    <li class="exit" >退出登录</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="main-nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-fw"></i>
+                    <p></p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=operator_user.html">
+                   <div class="personal">
+            <img src="./images/fenlei.png">
+              </div>
+                    <p>客户分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa  fa-fw"></i>
+                    <p></p>
+                </a>
+            </li>
+            <li>
+                <a href="redirect?page=operator_expenses.html">
+                	 <div class="personal">
+            <img src="./images/per.png">
+              </div>
+                    <p>个人中心</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa  fa-fw"></i>
+                    <p></p>
+                </a>
+            </li>
+          
+              <li>
+                <a href="">
+                    <i class="fa  fa-fw"></i>
+                    <p></p>
+                </a>
+            </li>
+        </ul>
+        <div class="main-details">
+            <div class="main-top">
+                <ul>
+                    <li>
+                        <i class="fa fa-home fa-fw"></i>
+                    </li>
+                    <li>服务管理</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="search">
+                    <!-- <input class="select" placeholder="手机号" /><button onclick="page(1)" class="select-btn"><i class="fa fa-search fa-fw"></i></button> -->
+                    
+                    <input class="select" placeholder="手机号" /><button class="select-btn"><i class="fa fa-search fa-fw"></i></button>
+                </div>
+              
+            </div>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox checkall"></th>
+                        <th>ID</th>
+                        <th>登录名</th>
+                        <th>手机</th>
+                        <th>邮箱<i class="fa fa-long-arrow-up fa-fw"></i></th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00001</td>
+                        <td>Anfhg</td>
+                        <td>18937374364</td>
+                        <td>111@qq.com</td>
+                        <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00001</td>
+                        <td>Anfhg</td>
+                        <td>18937374364</td>
+                        <td>111@qq.com</td>
+                        <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>00001</td>
+                        <td>Anfhg</td>
+                        <td>18937374364</td>
+                        <td>111@qq.com</td>
+                        <td>
+                            <span class="handle-btn"><i class="fa fa-edit fa-fw"></i>编辑</span>
+                            <span class="handle-btn"><i class="fa fa-close fa-fw"></i>删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="main-pagination">
+                <span class="pagefirst">首页</span>
+                <span class="last">上一页</span>
+                <span class="page">
+                <span class="main-pagination-page">1</span>
+                </span>
+                <span class="next">下一页</span>
+                <span class="pagelast">尾页</span>
+            </div>
+        </div>
+    </div>
+    <script src="./js/operator_product.js"></script>
+</body>
+
+</html>
